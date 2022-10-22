@@ -5,7 +5,7 @@ A lot of customers utilise e-banking to pay for their online purchases of goods.
 
 Web phishing dangers that are often encountered include:
 
-   *Through the use of a fake website, a practise known as web phishing, the goal is to get sensitive data including usernames, passwords, and credit card numbers. Damage to property and information leakage are the results. Numerous scams have the potential to target large enterprises.
+   * Through the use of a fake website, a practise known as web phishing, the goal is to get sensitive data including usernames, passwords, and credit card numbers. Damage to property and information leakage are the results. Numerous scams have the potential to target large enterprises.
    
 Applying a machine-learning algorithm to identify phishing websites is the major goal of this guided project.
    
