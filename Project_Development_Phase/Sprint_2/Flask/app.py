@@ -12,7 +12,7 @@ def home():
 
 @app.route('/predict')
 def predict():
-    return render_template('./templates/Final.html')
+    return render_template('./templates/predict-form.html')
 
 ans = ""   
 bns = ""   

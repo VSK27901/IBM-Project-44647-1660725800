@@ -1,0 +1,31 @@
+
+   {% extends "./templates/base.html" %} {% block base %} {%include
+    "./templates/navbar.html" %}
+   <div class="container">
+      <div class="row ">
+        <div class="col-lg-6"></div>
+        <div class="col-lg-6 predict-form-div ">
+          <div>
+    <ul class="pages ">
+      <!-- <li class="chat page">
+        <div class="chatArea">
+          <ul class="messages"></ul>
+        </div>
+        <input class="inputMessage" placeholder="Type here..."/>
+      </li> -->
+      <li class="login page">
+        <div class="form">
+          <h3 class="title">What's your name?</h3>
+          <input class="usernameInput" type="text" maxlength="14" />
+          <div class="user-info">
+            <h3 class="title">Hi! </h3>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  </div>
+</div>
+</div>
+<script src="../static/js/predict-form.js"></script>
+{% endblock %}
