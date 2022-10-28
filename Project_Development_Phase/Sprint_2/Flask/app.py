@@ -1,4 +1,5 @@
 import os
+from os.path import join, dirname
 from dotenv import load_dotenv
 from functools import wraps
 from http.client import HTTPException
@@ -13,9 +14,6 @@ import json
 app = Flask(__name__,template_folder='../Flask')
 model = pickle.load(open('../Flask/Phishing_Website.pkl','rb'))
 
-import os
-from os.path import join, dirname
-from dotenv import load_dotenv
 
 dotenv_path = join(dirname(__file__), '.env')
 load_dotenv(dotenv_path)
