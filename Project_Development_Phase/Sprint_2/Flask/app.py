@@ -1,4 +1,5 @@
-from distutils.log import error
+import os
+from dotenv import load_dotenv
 from functools import wraps
 from http.client import HTTPException
 import numpy as np
@@ -12,7 +13,16 @@ import json
 app = Flask(__name__,template_folder='../Flask')
 model = pickle.load(open('../Flask/Phishing_Website.pkl','rb'))
 
-mongoDB=pymongo.MongoClient('mongodb+srv://IBM_Course:123456_*@cluster0.aghcl0q.mongodb.net/?retryWrites=true&w=majority')
+import os
+from os.path import join, dirname
+from dotenv import load_dotenv
+
+dotenv_path = join(dirname(__file__), '.env')
+load_dotenv(dotenv_path)
+MONGODB_URL = os.environ.get("MONGODB_URL")
+
+
+mongoDB=pymongo.MongoClient(MONGODB_URL)
 db=mongoDB['Web_Phishing_Detection']
 account=db.account
 app.secret_key=b'\x0b\xa9\x97\x07\xd8\xb3\xc3W\x8d\xeb\xf8\xe6\xbe\x92tb'
