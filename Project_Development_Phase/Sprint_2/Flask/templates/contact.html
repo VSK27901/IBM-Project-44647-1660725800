@@ -4,27 +4,27 @@
 <link rel="stylesheet" href="https://unpkg.com/aos@2.3.0/dist/aos.css" />
 <div class="container">
   <h1 class="contact-us-heading">Contact Us!</h1>
-  <form class="contact-form" data-aos="zoom-in" autocomplete="off">
+  <form class="contact-form" data-aos="zoom-in" autocomplete="off" onsubmit="sendEmail()">
     <ul>
       <li class="input-list">
-        <label for="name"
+        <label for="name" 
           ><span class="span-label"
             >Name <span class="required-star">*</span></span
           ></label
         >
-        <input type="text" id="name" name="user_name" required />
+        <input type="text" id="name" name="name" class="name" required />
       </li>
       <li class="input-list">
-        <label for="mail"
+        <label for="mail" class="email"
           ><span class="span-label"
             >Email <span class="required-star">*</span></span
           ></label
         >
-        <input type="email" id="mail" name="user_email" required />
+        <input type="email" id="mail" name="email" class="email" required />
       </li>
       <li class="input-list">
         <label for="msg"><span class="span-label">Message</span></label>
-        <textarea rows="4" cols="50" required></textarea>
+        <textarea rows="4" cols="50" name="msg" class="msg" required></textarea>
       </li>
       <li class="input-list">
         <input type="submit" />
@@ -50,5 +50,6 @@
   </a>
 </div>
 <script src="https://unpkg.com/aos@2.3.0/dist/aos.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 <script src="../static/js/contact.js"></script>
 {% endblock %}
