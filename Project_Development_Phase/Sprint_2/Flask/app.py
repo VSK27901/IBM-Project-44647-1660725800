@@ -18,12 +18,14 @@ model = pickle.load(open('../Flask/Phishing_Website.pkl','rb'))
 dotenv_path = join(dirname(__file__), '.env')
 load_dotenv(dotenv_path)
 MONGODB_URL = os.environ.get("MONGODB_URL")
+SECRET_KEY = os.environ.get("SECRET_KEY")
+
 
 
 mongoDB=pymongo.MongoClient(MONGODB_URL)
 db=mongoDB['Web_Phishing_Detection']
 account=db.account
-app.secret_key=b'\x0b\xa9\x97\x07\xd8\xb3\xc3W\x8d\xeb\xf8\xe6\xbe\x92tb'
+app.secret_key= SECRET_KEY
 
 carouselDataFile = open('./static/json/carouselData.json')
 carouselData = json.load(carouselDataFile)
