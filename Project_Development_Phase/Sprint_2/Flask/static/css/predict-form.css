@@ -6,6 +6,9 @@ body {
 .js-menu-show {
   color: white !important;
 }
+.userInfo,
+.welcomeUser,
+.vertical-line,
 .loginButton {
   display: none;
 }
