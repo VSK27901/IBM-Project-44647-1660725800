@@ -3,7 +3,7 @@ AOS.init({
 });
 
 (function () {
-  emailjs.init("userID_XXXXXXXX");
+  emailjs.init("ABfrODV3hUG2sgR1W");
 })();
 document
   .getElementsByClassName("contact-form")[0]
@@ -20,7 +20,7 @@ document
     };
     console.log(contactParams);
     emailjs
-      .send("service_XXXXX", "template_XXXXX", contactParams)
+      .send("service_knw34km", "template_gib2px1", contactParams)
       .then(function (res) {
         document.getElementsByClassName(
           "contact-success-message"
