@@ -18,7 +18,6 @@ document
       emailid: email,
       message: msg,
     };
-    console.log(contactParams);
     emailjs
       .send("service_XXXXX", "template_XXXX", contactParams)
       .then(function (res) {
