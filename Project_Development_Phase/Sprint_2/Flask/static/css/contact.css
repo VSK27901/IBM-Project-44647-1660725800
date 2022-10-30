@@ -3,8 +3,10 @@
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 label,
-input,
-textarea {
+.fullName,
+.emailId,
+.message,
+.contact-form-submit-button {
   display: block;
   width: 100%;
 }
@@ -25,13 +27,16 @@ ul {
   font-size: 0.8rem;
   text-transform: uppercase;
 }
-input[type="submit"] {
+.contact-form-submit-button {
   background: rgb(69, 69, 185);
   color: white;
   font-weight: 700;
   font-size: 1.2rem;
   border-radius: 5px;
   margin-top: 1.3em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  cursor: pointer;
 }
 .container {
   display: flex;
@@ -53,8 +58,9 @@ input[type="submit"] {
   color: red;
 }
 
-input,
-textarea {
+.fullName,
+.emailId,
+.message {
   width: 100%;
   padding: 15px 20px;
   border: 1px solid #e1e2eb;
@@ -109,4 +115,13 @@ textarea {
 .contact-us-heading {
   margin-top: 2em;
   margin-bottom: 0.5em;
+}
+.contact-success-message {
+  text-align: center;
+  display: none;
+}
+.success-parent {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }

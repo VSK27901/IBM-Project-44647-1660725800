@@ -4,15 +4,20 @@
 <link rel="stylesheet" href="https://unpkg.com/aos@2.3.0/dist/aos.css" />
 <div class="container">
   <h1 class="contact-us-heading">Contact Us!</h1>
-  <form class="contact-form" data-aos="zoom-in" autocomplete="off" onsubmit="sendEmail()">
+  <form class="contact-form" data-aos="zoom-in" autocomplete="off">
     <ul>
+      <li class="input-list success-parent">
+        <span class="alert alert-success contact-success-message" role="alert"
+          >Form Submitted Successfully!</span
+        >
+      </li>
       <li class="input-list">
-        <label for="name" 
+        <label for="name"
           ><span class="span-label"
             >Name <span class="required-star">*</span></span
           ></label
         >
-        <input type="text" id="name" name="name" class="name" required />
+        <input type="text" id="name" name="name" class="fullName" required />
       </li>
       <li class="input-list">
         <label for="mail" class="email"
@@ -20,14 +25,21 @@
             >Email <span class="required-star">*</span></span
           ></label
         >
-        <input type="email" id="mail" name="email" class="email" required />
+        <input type="email" id="mail" name="email" class="emailId" required />
       </li>
       <li class="input-list">
         <label for="msg"><span class="span-label">Message</span></label>
-        <textarea rows="4" cols="50" name="msg" class="msg" required></textarea>
+        <textarea
+          rows="4"
+          cols="50"
+          name="msg"
+          class="message"
+          required
+        ></textarea>
       </li>
+
       <li class="input-list">
-        <input type="submit" />
+        <input type="submit" class="contact-form-submit-button" />
       </li>
     </ul>
   </form>
@@ -50,6 +62,10 @@
   </a>
 </div>
 <script src="https://unpkg.com/aos@2.3.0/dist/aos.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script
+  type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"
+></script>
+
 <script src="../static/js/contact.js"></script>
 {% endblock %}
